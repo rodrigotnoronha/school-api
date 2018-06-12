@@ -78,9 +78,9 @@
   - mysql 5.7
   - redis
 
-### How to install
+### Como instalar
 
-[How to install video In Portugues](https://www.youtube.com/watch?v=RHxsmFYcmIc)
+[Vídeo](https://www.youtube.com/watch?v=RHxsmFYcmIc)
 
 ```shell
 composer create-project emtudo/school-api
@@ -88,19 +88,19 @@ cd school-api
 php artisan jwt:generate
 ```
 
-Configure the `.env` file after configuring run the command below to create the database:
+Configure o arquivo `.env`  antes de executar o comando abaixo para criar as tabelas do banco de dados:
 
 ```shell
 php artisan migrator
 ```
 
-### How to test
+### Como testar
 
 ```shell
 php artisan serve
 ```
 
-### Admin (Default)
+### Admin (Padrão)
 
 - username: admin@user.com
 - password: abc123
