@@ -80,6 +80,7 @@
 ### Como instalar
 
 [Vídeo](https://www.youtube.com/watch?v=RHxsmFYcmIc)
+[Demo](https://www.youtube.com/watch?v=QXI84A-QnUA&t=136s)
 
 ```shell
 composer create-project emtudo/school-api
