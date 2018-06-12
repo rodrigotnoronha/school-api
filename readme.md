@@ -30,7 +30,6 @@
   - Atividades
   - Provas
 * Calendário
-  - Eventos
   - Calendário letivo(por classe ou por escola)
 
 
