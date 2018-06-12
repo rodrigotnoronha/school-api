@@ -6,9 +6,8 @@
 ## Grupos com Acesso
 
 * Aluno
-* Pais de Aluno
+* Responsáveis (Pais de Aluno)
 * Professores
-* Funcionário Administrativo
 * Administrador (Diretor de todas as escolas)
 
 ## Cadastros
