@@ -1,5 +1,7 @@
 # School - API
 
+[Instructions in portuguese](https://github.com/emtudo/school-api/blob/master/readme-pt.md)
+
 ## What is the project about?
  - Student Enrollment Management
 
