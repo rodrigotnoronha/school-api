@@ -1,73 +1,73 @@
 # School - API
 
-## What is the project about?
- - Student Enrollment Management
+## Objetivo
+ - Criar um sistema para realizar toda a gestão de alunos matriculados.
 
 ## Roadmap
 
-### Access
+### Grupos com Acesso
 
-* Student
-* Responsible (Parents)
-* Teachers
-* Administradors (Directs of the all schools)
+* Aluno
+* Responsáveis (Pais de Aluno)
+* Professores
+* Administrador (Diretor de todas as escolas)
 
-### Registers
+### Cadastros
 
-* Schools
-* Parents
-* Teachers
-* Students
-* Enrollments
-* Transports
-  - Vehicles
-  - Drivers
-  - Routes
+* Escolas
+* Pais
+* Professores
+* Alunos
+* Matérias
+* Transporte
+  - Veículos
+  - Motoristas
+  - Rotas
 * Classes
-  - Enrollments
-  - Frequencies
-  - Grades
-  - Subjects
-  - Quizzes
-* Calendars
-  - School calendar
+  - Matricula
+  - Frequência
+  - Notas
+  - Atividades
+  - Provas
+* Calendário
+  - Calendário letivo
 
-### Rules
+### Regras
 
-* Registers
+* CADASTRO
 
-  Before registering a student, the Student Mother will be registered.
-  A mother can have children of different parents.
+  Antes de cadastrar um aluno, a Mãe do Aluno de estar cadastrada.
+  Uma mãe pode ter filhos de pais diferentes.
 
 * CLASSES
-  Associate Classes with Matters, being able to select the teachers enrolled for that subject and valuing if the teacher not associated to another class or school in the selected period.
-  Associate Professor with Subjects;
-  Address the issue of substitute teacher;
+  Associar Classes a Matérias, podendo selecionar os professores inscritos para aquela matéria e valindando se o professor não associado para outra classe ou escola no período selecionado.
+  Associar Professor a Matérias;
+  Tratar a questão de professor substituto;
 
-* Enrollments
-  You can enroll a student in a class, OR, enroll several at a time, that is, at the end of the year, approved students may migrate from grade 3 to grade 4.
+* MATRÍCULA
+  Pode-se matricular um aluno em uma classe, OU, matricular vários de uma só vez, ou seja, no final do ano, os alunos aprovados poderão se migrados do 3º para o 4º ano.
 
-* Transports
-  Create transport routes.
-  Link students to routes.
+* TRANSPORTE
+  Criar rotas de transporte.
+  Associar estudantes a rotas.
 
-* Teachers
-  Release of absences, removals and attestations.
+* PROFESSORES
+  Lançamento de faltas, afastamento e atestados.
 
 ### Dashboard
 
 * Widgets
 
-### Dependencies
+## Dependencies
   - php 7.2
   - mysql 5.7
   - redis
 
-### Como instalar
+## Como instalar
 
-[Installation video in Portuguese](https://www.youtube.com/watch?v=RHxsmFYcmIc)
+[Vídeo de instalação](https://www.youtube.com/watch?v=RHxsmFYcmIc)
 
-[Demo video in Portuguese](https://www.youtube.com/watch?v=QXI84A-QnUA&t=136s)
+[Vídeo demonstração](https://www.youtube.com/watch?v=QXI84A-QnUA&t=136s)
 
 ```shell
 composer create-project emtudo/school-api
@@ -75,25 +75,25 @@ cd school-api
 php artisan jwt:generate
 ```
 
-Configure the `.env` file before executing the command below to create the database tables:
+Configure o arquivo `.env`  antes de executar o comando abaixo para criar as tabelas do banco de dados:
 
 ```shell
 php artisan migrator
 ```
 
-### Como testar
+## Como testar
 
 ```shell
 php artisan serve
 ```
 
-### Admin (Default)
+## Admin (Padrão)
 
 - username: admin@user.com
 - password: abc123
 
 
-### Routes
+## Rotas
 
 | Method    | URI                                                                  | Name                                 | Action                                                                                   | Middleware                                          |
 |-----------|----------------------------------------------------------------------|--------------------------------------|------------------------------------------------------------------------------------------|-----------------------------------------------------|
