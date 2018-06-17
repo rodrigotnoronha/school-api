@@ -1,6 +1,6 @@
 # School - API
 
-[Instruções em inglês](https://github.com/emtudo/school-api/blob/master/readme-pt.md)
+[Instruções em inglês](https://github.com/emtudo/school-api/blob/master/readme.md)
 
 ## Objetivo
  - Criar um sistema para realizar toda a gestão de alunos matriculados.
