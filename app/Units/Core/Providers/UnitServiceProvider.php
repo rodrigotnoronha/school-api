@@ -11,13 +11,4 @@ class UnitServiceProvider extends ServiceProvider
     protected $providers = [
         RouteServiceProvider::class,
     ];
-
-    public function register()
-    {
-        $this->app->bind('path.public', function () {
-            return base_path('public_html');
-        });
-
-        parent::register();
-    }
 }

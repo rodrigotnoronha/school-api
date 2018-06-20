@@ -11,6 +11,7 @@ class TenantSeeder extends Seeder
 {
     public function run()
     {
+        $tenantMaster = Tenant::first();
         CourseSeeder::createByTenant($tenantMaster);
         SubjectSeeder::createByTenant($tenantMaster);
 

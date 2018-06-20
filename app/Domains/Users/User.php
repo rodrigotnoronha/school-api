@@ -101,7 +101,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      */
     public function setPasswordAttribute($value)
     {
-        $this->attributes['password'] = bcrypt($value);
+        $this->attributes['password'] = app('hash')->driver('argon')->make($value);
     }
 
     public function belongsToTenant($tenantId)

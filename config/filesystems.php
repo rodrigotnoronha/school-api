@@ -8,7 +8,7 @@ return [
     'disks' => [
         'avatars' => [
             'driver' => 'local',
-            'root' => base_path('public_html/storage/avatars'),
+            'root' => base_path('public/storage/avatars'),
             'url' => env('APP_URL').'/storage/avatars',
             'visibility' => 'public',
         ],
