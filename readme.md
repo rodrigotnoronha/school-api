@@ -4,6 +4,7 @@
 
 ## What is the project about?
  - Student Enrollment Management
+ - [SPA to use this API](https://github.com/emtudo/school-spa)
 
 ## Roadmap
 
@@ -65,7 +66,7 @@
   - mysql 5.7
   - redis
 
-### Como instalar
+### How to install
 
 [Installation video in Portuguese](https://www.youtube.com/watch?v=RHxsmFYcmIc)
 
@@ -83,7 +84,7 @@ Configure the `.env` file before executing the command below to create the datab
 php artisan migrator
 ```
 
-### Como testar
+### How to test
 
 ```shell
 php artisan serve
