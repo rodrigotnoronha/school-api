@@ -6,7 +6,7 @@
  - Student Enrollment Management
  - [SPA to use this API](https://github.com/emtudo/school-spa)
 
-## Roadmap
+## Features
 
 ### Access
 

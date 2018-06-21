@@ -6,7 +6,7 @@
  - Criar um sistema para realizar toda a gestão de alunos matriculados.
  - [SPA para usar esta API](https://github.com/emtudo/school-spa)
 
-## Roadmap
+## Recursos
 
 ### Grupos com Acesso
 
