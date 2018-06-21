@@ -2,6 +2,8 @@
 
 namespace Emtudo\Domains\Courses\Repositories\Traits\Grades;
 
+use Emtudo\Domains\Courses\Grade;
+
 trait CreateManyTrait
 {
     public function createMany(array $data = [])
