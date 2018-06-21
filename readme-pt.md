@@ -65,6 +65,7 @@
   - php 7.2
   - mysql 5.7
   - redis
+  - Algumas extensões do php serão exigida, incluindo e não se limitando apenas a **php-ext**, você precisa ter instalada.
 
 ## Como instalar
 
