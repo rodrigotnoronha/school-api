@@ -65,7 +65,6 @@
   - php 7.2
   - mysql 5.7
   - redis
-  - Some php extensions will be required, including but not limited to **php-ext**, you must have installed.
 
 ### php extensions
 
