@@ -67,6 +67,31 @@
   - redis
   - Some php extensions will be required, including but not limited to **php-ext**, you must have installed.
 
+### php extensions
+
+Some php extensions are required. I recommend installing the extensions below, although not all of them are mandatory in this project:
+
+```
+php7.2-bcmath \
+php7.2-common \
+php7.2-cgi \
+php7.2-curl \
+php7.2-dev \
+php7.2-gd \
+php7.2-intl \
+php7.2-json \
+php7.2-mysql \
+php7.2-mbstring \
+php7.2-pgsql \
+php7.2-sqlite3 \
+php7.2-xml \
+php7.2-zip \
+php-apcu \
+php-imagick \
+php-memcached \
+php-redis
+```
+
 ### How to install
 
 [Installation video in Portuguese](https://www.youtube.com/watch?v=RHxsmFYcmIc)

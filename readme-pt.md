@@ -61,11 +61,37 @@
 
 * Widgets
 
-## Dependencies
+## Dependências
   - php 7.2
   - mysql 5.7
   - redis
-  - Algumas extensões do php serão exigida, incluindo e não se limitando apenas a **php-ext**, você precisa ter instalada.
+
+### php extensões
+
+Algumas extensões do php são exigidas. Eu recomendo instalar as extensões abaixo, embora nem todas são obrigatórias neste projeto:
+
+```
+php7.2-bcmath \
+php7.2-common \
+php7.2-cgi \
+php7.2-curl \
+php7.2-dev \
+php7.2-gd \
+php7.2-intl \
+php7.2-json \
+php7.2-mysql \
+php7.2-mbstring \
+php7.2-pgsql \
+php7.2-sqlite3 \
+php7.2-xml \
+php7.2-zip \
+php-apcu \
+php-imagick \
+php-memcached \
+php-redis
+```
+
+https://busy.org/@emtudo/school-spa-is-an-interface-frontend-for-the-school-api
 
 ## Como instalar
 
