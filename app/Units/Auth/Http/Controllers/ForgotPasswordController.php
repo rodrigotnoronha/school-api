@@ -66,11 +66,12 @@ class ForgotPasswordController extends Controller
     /**
      * Get the response for a successful password reset link.
      *
-     * @param string $response
+     * @param \Illuminate\Http\Request $request
+     * @param string                   $response
      *
      * @return \Illuminate\Http\RedirectResponse
      */
-    protected function sendResetLinkResponse($response)
+    protected function sendResetLinkResponse(Request $request, $response)
     {
         return $this->respond->ok(['status' => 'Se existir o endereço de email cadastrado será enviado um link para recuperar a senha'], Response::HTTP_OK);
 //        return $this->respond->ok(['status' => trans($response)], Response::HTTP_OK);
