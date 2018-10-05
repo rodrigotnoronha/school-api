@@ -51,10 +51,11 @@ class ResetPasswordController extends Controller
      * Get the response for a successful password reset.
      *
      * @param string $response
+     * @param \Illuminate\Http\Request
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    protected function sendResetResponse($response)
+    protected function sendResetResponse(Request $request, $response)
     {
         return $this->respond->ok(['token' => $this->guard()->issue()], trans($response));
     }
