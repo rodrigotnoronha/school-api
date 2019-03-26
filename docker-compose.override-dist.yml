@@ -14,21 +14,16 @@ services:
       - 80:8080
       - 443:8083
 
-  # MAILCATCHER
-  mailcatcher:
+  # smtp
+  smtp:
     ports:
-      - 2025:1025
-      - 2080:1080
+      - 1025:1025
+      - 2080:8025
 
-  # MYSQL
-  mysql:
+  # db
+  db:
     ports:
       - 4306:3306
-    environment:
-      - MYSQL_ROOT_PASSWORD=emtudo
-      - MYSQL_DATABASE=emtudo
-      - MYSQL_USER=emtudo
-      - MYSQL_PASSWORD=emtudo
 
   # REDIS
    cache:

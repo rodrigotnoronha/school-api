@@ -70,7 +70,7 @@
 
 Some php extensions are required. I recommend installing the extensions below, although not all of them are mandatory in this project:
 
-```
+```shell
 php7.2-bcmath \
 php7.2-common \
 php7.2-cgi \
