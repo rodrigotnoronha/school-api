@@ -10,6 +10,7 @@ use Illuminate\Http\Response;
 use Illuminate\Validation\ValidationException;
 use Symfony\Component\Debug\Exception\FlattenException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 
 class ExceptionHandler extends Handler
 {
@@ -56,11 +57,11 @@ class ExceptionHandler extends Handler
     /**
      * Render the given HttpException.
      *
-     * @param \Symfony\Component\HttpKernel\Exception\HttpException $e
+     * @param \Symfony\Component\HttpKernel\Exception\HttpExceptionInterface  $e $e
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    protected function renderHttpException(HttpException $e)
+    protected function renderHttpException(HttpExceptionInterface $e)
     {
         return $this->convertExceptionToResponse($e);
     }

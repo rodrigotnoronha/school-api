@@ -17,6 +17,7 @@ use Symfony\Component\Debug\Exception\FlattenException;
 use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 
 abstract class Handler extends ExceptionHandler implements ExceptionHandlerContract
 {
@@ -111,11 +112,11 @@ abstract class Handler extends ExceptionHandler implements ExceptionHandlerContr
     /**
      * Render the given HttpException.
      *
-     * @param \Symfony\Component\HttpKernel\Exception\HttpException $e
+     * @param \Symfony\Component\HttpKernel\Exception\HttpExceptionInterface  $e $e
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    protected function renderHttpException(HttpException $e)
+    protected function renderHttpException(HttpExceptionInterface $e)
     {
         $status = $e->getStatusCode();
 
