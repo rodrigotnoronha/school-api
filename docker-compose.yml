@@ -31,7 +31,7 @@ volumes:
 services:
   # API
   api:
-    image: ambientum/php:7.2-nginx
+    image: ambientum/php:7.3-nginx
     container_name: emtudo-school-api
     environment:
       - XDEBUG_ENABLED=true
@@ -43,24 +43,24 @@ services:
       - emtudo-school-temp-local:/home/ambientum/.local
       - emtudo-school-temp-composer:/home/ambientum/.composer
     links:
-      - mysql
+      - db
       - cache
-      - mailcatcher
+      - smtp
     ports:
       - 8000:8080
       - 8443:8083
 
-  # MAILCATCHER
-  mailcatcher:
-    image:  ambientum/mailcatcher:latest
-    container_name: emtudo-school-mailcatcher
+  # SMTP
+  smtp:
+    image:  mailhog/mailhog
+    container_name: emtudo-school-smtp
     ports:
       - 1025:1025
       - 1080:1080
 
-  # MYSQL
-  mysql:
-    image: ambientum/mysql:5.7
+  # db
+  db:
+    image: mysql:5.7
     container_name: emtudo-school-mysql
     volumes:
       - emtudo-school-mysql-data:/var/lib/mysql
