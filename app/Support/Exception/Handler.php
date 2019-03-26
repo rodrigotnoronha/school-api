@@ -112,7 +112,7 @@ abstract class Handler extends ExceptionHandler implements ExceptionHandlerContr
     /**
      * Render the given HttpException.
      *
-     * @param \Symfony\Component\HttpKernel\Exception\HttpExceptionInterface  $e $e
+     * @param \Symfony\Component\HttpKernel\Exception\HttpExceptionInterface
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
