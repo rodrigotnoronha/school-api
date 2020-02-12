@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5eb9700a14ef1702d903be576ec15b61",
+    "content-hash": "056d2ef6910b39c3a4b5f64570038b53",
     "packages": [
         {
             "name": "artesaos/migrator",
@@ -5504,7 +5504,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.2.0"
+        "php": ">=7.2.0",
+        "ext-gmp": "*"
     },
     "platform-dev": []
 }
