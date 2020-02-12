@@ -8,6 +8,7 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.2.0",
+        "ext-gmp": "*",
         "artesaos/migrator": "^2.0",
         "codecasts/laravel-jwt": "^0.10.0",
         "doctrine/dbal": "^2.8",
@@ -22,6 +23,7 @@
         "spatie/laravel-fractal": "^5.4",
         "fzaninotto/faker": "~1.4"
     },
+    
     "require-dev": {
         "filp/whoops": "~2.0",
         "mockery/mockery": "~1.0",
