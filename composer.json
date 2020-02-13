@@ -13,7 +13,6 @@
         "codecasts/laravel-jwt": "^0.10.0",
         "doctrine/dbal": "^2.8",
         "fideloper/proxy": "~4.0",
-        "fruitcake/laravel-cors": "^1.0",
         "fzaninotto/faker": "~1.4",
         "hashids/hashids": "^3.0",
         "laravel/framework": "5.8.*",
