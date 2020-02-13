@@ -15,6 +15,7 @@ class HttpKernel extends Kernel
      */
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
+        \Emtudo\Http\Middleware\Cors::class,
     ];
 
     /**
@@ -67,6 +68,5 @@ class HttpKernel extends Kernel
         'staff' => \Emtudo\Units\Core\Http\Middleware\StaffRole::class,
         'teacher' => \Emtudo\Units\Core\Http\Middleware\Teacher::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'cors' => \Emtudo\Http\Middleware\Cors::class,
     ];
 }
