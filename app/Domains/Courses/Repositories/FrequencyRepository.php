@@ -178,7 +178,7 @@ class FrequencyRepository extends TenantRepository implements FrequencyRepositor
             WHERE school_day_id IN (
                 SELECT id FROM school_days
                 WHERE school_days.id = frequencies.school_day_id
-                    AND DATE_FORMAT(date, '%Y%m') = {$yearMonth}
+                    AND to_char(date, '%Y%m') = {$yearMonth}
                 )")[0];
     }
 
