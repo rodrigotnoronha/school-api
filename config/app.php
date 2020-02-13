@@ -51,7 +51,6 @@ return [
         Migrator\MigrationServiceProvider::class,
         Spatie\Fractal\FractalServiceProvider::class,
         Codecasts\Auth\JWT\ServiceProvider::class,
-        ResultSystems\Cors\CorsServiceProvider::class,
 
         // Support Service Providers...
         Emtudo\Support\Helpers\HelperServiceProvider::class,
