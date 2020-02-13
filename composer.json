@@ -13,15 +13,15 @@
         "codecasts/laravel-jwt": "^0.10.0",
         "doctrine/dbal": "^2.8",
         "fideloper/proxy": "~4.0",
+        "fruitcake/laravel-cors": "^1.0",
+        "fzaninotto/faker": "~1.4",
         "hashids/hashids": "^3.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "~1.0",
-        "resultsystems/laravel-cors": "^2.0",
         "resultsystems/monitor": "^0.3",
         "resultsystems/relationships": "^0.4",
         "resultsystems/validation": "^5.7",
-        "spatie/laravel-fractal": "^5.4",
-        "fzaninotto/faker": "~1.4"
+        "spatie/laravel-fractal": "^5.4"
     },
     
     "require-dev": {
