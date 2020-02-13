@@ -56,7 +56,7 @@ class GradeRepository extends TenantRepository implements GradeRepositoryContrac
         $query->whereHas('quiz', function ($query) use ($year, $twoMonth) {
             $query
                 ->select('id')
-                ->whereRaw('YEAR(`quizzes`.`date`) = ?', $year);
+                ->whereRaw('EXTRACT(YEAR FROM `quizzes`.`date`) = ?', $year);
             if ($twoMonth and $twoMonth > 0 and $twoMonth < 5) {
                 $dates = TwoMonth::getTwoMonthByYear($year);
                 $start = "start{$twoMonth}";

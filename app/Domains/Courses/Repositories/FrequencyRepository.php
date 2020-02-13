@@ -189,7 +189,7 @@ class FrequencyRepository extends TenantRepository implements FrequencyRepositor
         $query->whereHas('schoolDay', function ($query) use ($year, $twoMonth) {
             $query
                         ->select('id')
-                        ->whereRaw('YEAR(`school_days`.`date`) = ?', $year);
+                        ->whereRaw('EXTRACT(YEAR FROM `school_days`.`date`) = ?', $year);
             if ($twoMonth and $twoMonth > 0 and $twoMonth < 5) {
                 $dates = TwoMonth::getTwoMonthByYear($year);
                 $start = "start{$twoMonth}";

@@ -38,7 +38,7 @@ WHERE frequencies.school_day_id IN (
 SELECT school_days.id FROM school_days
 WHERE
     MONTH(school_days.date) = {$month}
-    AND YEAR(school_days.date) = {$group->year}
+    AND EXTRACT(YEAR FROM school_days.date) = {$group->year}
     AND groups.id = {$group->id}
     AND frequencies.student_id = {$student->id}
  ORDER BY subjects.label);");
@@ -53,7 +53,7 @@ WHERE
         LEFT JOIN subjects ON subjects.id = frequencies.subject_id
         WHERE
             MONTH(school_days.date) = {$month}
-            AND YEAR(school_days.date) = {$group->year}
+            AND EXTRACT(YEAR FROM school_days.date) = {$group->year}
         ORDER BY day;";
 
         return DB::SELECT($sql);
