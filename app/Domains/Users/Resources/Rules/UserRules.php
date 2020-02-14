@@ -36,7 +36,7 @@ class UserRules extends Rules
             'have_profiles' => 'sometimes|array',
             // 'have_profiles.manager' => 'required|boolean',
             'have_profiles.student' => 'required|boolean',
-            'have_profiles.responsible' => 'required|boolean',
+            // 'have_profiles.responsible' => 'required|boolean',
             'have_profiles.teacher' => 'required|boolean',
         ];
     }
