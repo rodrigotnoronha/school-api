@@ -13,12 +13,12 @@ class UserRules extends Rules
             'email' => 'required|string|max:255|email|unique:users',
             'password_confirmation' => 'required_with:password',
             // 'country_register' => 'bail|required|cpf|unique:users,country_register',
-            'state_register' => [
-                'sometimes',
-                'regex:/[0-9]/',
-            ],
-            'state_register_entity' => 'required_with:state_register|in:SSP,PM,PC,CNT,DIC,CTPS,FGTS,IFP,IPF,IML,MTE,MMA,MAE,MEX,POF,POM,SES,SJS,SJTS,ZZZ',
-            'state_register_state' => 'required_with:state_register|in:AC,AL,AP,AM,BA,CE,DF,ES,GO,MA,MT,MS,MG,PA,PB,PR,PE,PI,RJ,RN,RS,RO,RR,SC,SP,SE,TO',
+            // 'state_register' => [
+            //     'sometimes',
+            //     'regex:/[0-9]/',
+            // ],
+            // 'state_register_entity' => 'required_with:state_register|in:SSP,PM,PC,CNT,DIC,CTPS,FGTS,IFP,IPF,IML,MTE,MMA,MAE,MEX,POF,POM,SES,SJS,SJTS,ZZZ',
+            // 'state_register_state' => 'required_with:state_register|in:AC,AL,AP,AM,BA,CE,DF,ES,GO,MA,MT,MS,MG,PA,PB,PR,PE,PI,RJ,RN,RS,RO,RR,SC,SP,SE,TO',
             'birthdate' => 'required|date|date_format:Y-m-d',
 
             'phones' => 'required|array',
