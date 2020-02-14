@@ -12,7 +12,7 @@ class UserRules extends Rules
             'name' => 'required|string|max:50',
             'email' => 'required|string|max:255|email|unique:users',
             'password_confirmation' => 'required_with:password',
-            'country_register' => 'bail|required|cpf|unique:users,country_register',
+            // 'country_register' => 'bail|required|cpf|unique:users,country_register',
             'state_register' => [
                 'sometimes',
                 'regex:/[0-9]/',
@@ -22,9 +22,9 @@ class UserRules extends Rules
             'birthdate' => 'required|date|date_format:Y-m-d',
 
             'phones' => 'required|array',
-            'phones.home' => 'sometimes|nullable|phone_br',
+            // 'phones.home' => 'sometimes|nullable|phone_br',
             'phones.mobile' => 'required|cellphone_br',
-            'phones.work' => 'sometimes|nullable|phone_br',
+            // 'phones.work' => 'sometimes|nullable|phone_br',
 
             'address' => 'required|array',
             'address.street' => 'required|string|max:60',
