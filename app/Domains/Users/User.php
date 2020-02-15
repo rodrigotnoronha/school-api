@@ -106,7 +106,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
 
     public function belongsToTenant($tenantId)
     {
-        if ($this->is_admin) {
+        if ($this->master) {
             return true;
         }
 
