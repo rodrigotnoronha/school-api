@@ -27,7 +27,7 @@ class SimpleTenantTransformer extends Transformer
             'responsible' => $responsible,
             'student' => $student,
             'teacher' => $teacher,
-            // 'current' => (bool) (tenant()->id === $tenant->id),
+            'current' => (bool) (tenant()->id === $tenant->id),
         ];
     }
 }
