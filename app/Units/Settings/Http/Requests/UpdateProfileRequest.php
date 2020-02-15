@@ -26,7 +26,6 @@ class UpdateProfileRequest extends Request
                         ->ignore($id),
                 ],
                 'country_register' => [
-                    'required',
                     'cpf',
                     Rule::unique('users')
                         ->ignore($id),
