@@ -174,11 +174,11 @@ class FrequencyRepository extends TenantRepository implements FrequencyRepositor
 
     public function getFrequenciesByYearMonth(int $yearMonth)
     {
-        return DB::select("SELECT COALESCE(SUM(present::int), 0) AS presents, COALESCE(SUM(CASE WHEN present = FALSE THEN 1 ELSE 0 END), 0) as absences FROM frequencies
+        return DB::select("SELECT IFNULL(SUM(present), 0) AS presents, IFNULL(SUM(if(present=0, 1, 0)), 0) as absences  FROM frequencies
             WHERE school_day_id IN (
                 SELECT id FROM school_days
                 WHERE school_days.id = frequencies.school_day_id
-                    AND to_char(date, 'YYYYMM') = to_char({$yearMonth}, '999999')
+                    AND DATE_FORMAT(date, '%Y%m') = {$yearMonth}
                 )")[0];
     }
 
@@ -189,7 +189,7 @@ class FrequencyRepository extends TenantRepository implements FrequencyRepositor
         $query->whereHas('schoolDay', function ($query) use ($year, $twoMonth) {
             $query
                         ->select('id')
-                        ->whereRaw('EXTRACT(YEAR FROM `school_days`.`date`) = ?', $year);
+                        ->whereRaw('YEAR(`school_days`.`date`) = ?', $year);
             if ($twoMonth and $twoMonth > 0 and $twoMonth < 5) {
                 $dates = TwoMonth::getTwoMonthByYear($year);
                 $start = "start{$twoMonth}";

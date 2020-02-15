@@ -27,17 +27,17 @@ class UserQueryFilter extends BaseQueryBuilder
     {
         if ('today' === $when) {
             $today = Carbon::now()->format('md');
-            $this->query->whereRaw("to_char(birthdate, 'MMdd') = to_char({$today}, '9999')");
+            $this->query->whereRaw("DATE_FORMAT(birthdate, '%m%d') = {$today}");
         }
         if ('week' === $when) {
             $firstDay = Carbon::now()->startOfWeek()->format('md');
             $lastDay = Carbon::now()->endOfWeek()->format('md');
-            $this->query->whereRaw("to_char(birthdate, 'MMdd') between to_char({$firstDay}, '9999') and to_char({$lastDay}, '9999')");
+            $this->query->whereRaw("DATE_FORMAT(birthdate, '%m%d') between {$firstDay} and {$lastDay}");
         }
         if ('month' === $when) {
             $firstDay = Carbon::now()->startOfMonth()->format('md');
             $lastDay = Carbon::now()->endOfMonth()->format('md');
-            $this->query->whereRaw("to_char(birthdate, 'MMdd') between to_char({$firstDay}, '9999') and to_char({$lastDay}, '9999')");
+            $this->query->whereRaw("DATE_FORMAT(birthdate, '%m%d') between {$firstDay} and {$lastDay}");
         }
 
         return $this->query;
