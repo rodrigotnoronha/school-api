@@ -22,11 +22,7 @@ class UpdateResponsibleRequest extends Request
                     Rule::unique('users')
                         ->ignore($id),
                 ],
-                'country_register' => [
-                    'cpf',
-                    Rule::unique('users')
-                        ->ignore($id),
-                ],
+                
             ]);
         });
     }
