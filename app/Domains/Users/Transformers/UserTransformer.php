@@ -89,7 +89,7 @@ class UserTransformer extends Transformer
      */
     public function includeTenants(User $user)
     {
-        if ($user->isAdmin()) {
+        if ($user->master) {
             return $this->tenantsByAdmin();
         }
 

@@ -37,10 +37,19 @@ class UserRepository extends Repository implements UserRepositoryContract
 
         $user = auth()->user();
 
-        if ($this->schoolOnly && !$user->master) {
-            $query->whereHas('tenants', function ($query) {
-                return $query->where('id', tenant()->id);
-            });
+        if ($this->schoolOnly) {
+            if($user->master) {
+                $query->where('id', '<>', $user->id)
+                ->whereHas('tenants', function ($query) {
+                    return $query->where('id', tenant()->id);
+                });
+            } else {
+                $query->where([['master', false], ['is_admin', false]])
+                ->whereHas('tenants', function ($query) {
+                    return $query->where('id', tenant()->id);
+                });
+            }
+            
         }
 
         return $query;
