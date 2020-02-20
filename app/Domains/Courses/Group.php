@@ -203,7 +203,7 @@ class Group extends TenantModel
             select sum(available) as available from (
                 select (groups.max_students - count(enrollments.group_id)) as available from groups
                     LEFT JOIN enrollments ON enrollments.group_id = groups.id
-                    WHERE groups.id = {$this->id}
+                    WHERE groups.id = {$this->id} AND groups.deleted_at IS NULL
                     GROUP by groups.id) as groups
             "
         )[0]->available ?? 0;

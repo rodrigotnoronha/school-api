@@ -146,7 +146,7 @@ class GroupRepository extends TenantRepository implements GroupRepositoryContrac
             select sum(available) as available from (
                 select (groups.max_students - count(enrollments.group_id)) as available from groups
                     LEFT JOIN enrollments ON enrollments.group_id = groups.id
-                    WHERE groups.year = {$year}
+                    WHERE groups.year = {$year} AND groups.deleted_at IS NULL
                         and groups.tenant_id = {$tenantId}
                     GROUP by groups.id) as groups
             "
