@@ -45,6 +45,7 @@ class Schedule extends TenantModel
 
     public static function boot()
     {
+        parent::boot();
         static::creating(function ($model) {
             $model->id = uuid();
         });
